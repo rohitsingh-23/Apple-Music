@@ -1,0 +1,116 @@
+.horizontal-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    text-align: left;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.albums-left-arrow {
+    position: absolute;
+    left: -30px;
+}
+
+.albums-left-arrow>*,
+.albums-right-arrow>* {
+    font-size: 40px;
+    color: #45474B;
+}
+
+.albums-card {
+    width: 260px;
+    height: 100%;
+    border-radius: 7px;
+}
+
+
+.album-image-container{
+    width: 200px;
+    position: relative;
+}
+
+.album-image-container.large{
+    width:100%;
+}
+
+
+.album-image-container.large>img{
+    width: 100%;
+}
+
+.albums-cards-container {
+    display: flex;
+    flex-grow: 2;
+    overflow-x: scroll;
+    gap: 20px;
+    scrollbar-width: none;
+    /* width: 80%; */
+}
+
+
+.album-image-container img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+}
+
+.album-card-title {
+    font-size: 0.8em;
+    color: #45474B;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.albums-card-desc {
+    font-size: 0.8em;
+    color: #bdbdbd;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.album-image-container:hover .play-now {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.album-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.album-image-container:hover::after {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 700px) {
+
+    .album-image-container.large {
+        width: 190px;
+    }
+
+    .album-image-container.small {
+        width: 125px;
+    }
+        .albums-left-arrow,
+        .albums-right-arrow {
+            display: none;
+        }
+}

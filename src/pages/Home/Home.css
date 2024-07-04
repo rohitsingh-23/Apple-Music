@@ -1,0 +1,100 @@
+.home-container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    position: relative;
+}
+
+.nav-left{
+    width: 18vw;
+}
+
+.top-navbar{
+    display: none;
+}
+
+.home-right-section{
+    flex-grow: 1;
+    width: 80vw;
+    box-sizing: border-box;
+    
+}
+
+.home-right-section>.top-row{
+    padding-top: 30px;
+    padding-left: 30px;
+    display: flex;
+    /* width: 100%; */
+    /* background-color: aqua; */
+}
+
+.top-row>div {
+    padding-bottom: 30px;
+}
+
+.best-albums-container{
+    width: 35%;
+    margin-right: 5%;
+}
+
+.horizontal-list-section-container{
+    width: 56%;
+}
+
+.essential-albums-container{
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    color: #222831;
+    text-align: left;
+}
+
+.albums-container{
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.similar-artists{
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.center-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 700px) {
+    .home-right-section {
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    .top-row{
+       flex-direction: column;
+    }
+
+    .best-albums-container {
+        width: 100%;
+        margin-right: 5%;
+    }
+
+    .horizontal-list-section-container {
+        width: 100%;
+    }
+
+    .home-container{
+        flex-direction: column;
+    }
+    
+    
+}

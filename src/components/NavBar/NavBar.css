@@ -1,0 +1,79 @@
+.nav-bar{
+    z-index: 15px;
+    display: none;
+    border-bottom: 1px solid #cececeae;
+}
+
+@media only screen and (max-width: 700px) {
+    .nav-left {
+        display: block
+    }
+
+    .nav-bar{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 2% 4%;
+        width: 100vw;
+        box-sizing: border-box;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 12;
+        background-color: #fff;
+        transition: height 0.5s;
+        height: 60px;
+        overflow: hidden;
+    }
+
+    .nav-bar.openedNavBar {
+        height: 100%;
+    }
+    
+
+    .top-nav-bar-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .options-nav-bar-container{
+        width: 100%;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+
+    .options-nav-bar-container>div {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .options-nav-bar-container>div>:first-child {
+        color: #d60017;
+        font-size: 22px;
+        padding: 10px;
+        
+    }
+    
+    .menu-button {
+        font-size: 40px;
+        color: #d72c17;
+    }
+
+    .apple-music-icon {
+        display: flex;
+        font-size: 16px;
+        align-items: center;
+    }
+
+    .top-nav-bar-container>p {
+        font-size: 14px;
+        color: #d72c17;
+        font-weight: 500;
+    }
+}
