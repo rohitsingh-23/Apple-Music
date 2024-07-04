@@ -1,6 +1,53 @@
-# Getting Started with Create React App
+# Apple Music Artists Page React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a React application that showcases an Apple Music artist page. The application features functionalities including volume control with a slider, and the ability to pause and play music.
+
+# Feature:
+
+1. **Artist Page:**
+   - Display detailed information about the artist.
+
+2. **Horizontal Scrollable Sections:**
+   - There are horizontal scrollable scrollable sections for ->  
+   -- Top Songs
+   -- Essential Albums
+   -- Albums
+   -- Singles & EPs
+   -- Similar Artists
+
+2. **Music Player:**
+   - Integrated music player to play the artist's songs.
+
+3. **Play/Pause Control:**
+   - Play and pause the music with dedicated buttons.
+
+4. **Volume Contro:**
+   - Adjust the volume of the music using a slide.
+
+5. **Forward Songs:**
+   - Forwards songs using a slider.
+
+6. **Tabs:**
+   - You can change Tabs with the side nav bar on desktop or top nav bar on mobile.
+
+## Demo
+
+A live demo of the application can be found [here](https://apple-music-two.vercel.app/).
+
+## Screenshots
+
+###   Desktop View
+
+##
+![Desktop View 1](./public//images/SS/desktop-1.png)
+![Desktop View 1](./public//images/SS/desktop-2.png)
+![Desktop View 1](./public//images/SS/desktop-3.png)
+
+###   Mobile View
+
+##
+![Mobile View](./public/images/SS/mobile.png)
+
 
 ## Available Scripts
 
