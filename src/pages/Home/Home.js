@@ -20,9 +20,9 @@ const Home = () => {
         <NavBar className="top-navbar" />
       </div>
       <div className="home-right-section">
+        <AudioPlayer />
         {selectedTab == "browse" ? (
           <>
-            <AudioPlayer />
             <HeroSection />
             <div className="top-row">
               <div className="best-albums-container">
