@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { IoReorderTwoOutline } from "react-icons/io5";
+import { IoReorderTwoOutline, IoClose } from "react-icons/io5";
 import { FaApple } from "react-icons/fa";
 import "./NavBar.css";
 // import { FaApple } from "react-icons/fa";
@@ -17,7 +17,17 @@ const NavBar = () => {
   return (
     <div className={`nav-bar ${isOpen && "openedNavBar"}`}>
       <div className="top-nav-bar-container">
-        <IoReorderTwoOutline className="menu-button" onClick={handleNav} />
+        <div className="menu-button-container">
+          {isOpen ? (
+            <IoClose className="menu-button-close" onClick={handleNav} />
+          ) : (
+            <IoReorderTwoOutline
+              className="menu-button-hamburger"
+              onClick={handleNav}
+            />
+          )}
+        </div>
+        {/* <IoReorderTwoOutline className="menu-button" onClick={handleNav} /> */}
         <div className="apple-music-icon">
           <FaApple />
           <p>Music</p>
