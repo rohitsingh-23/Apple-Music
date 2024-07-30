@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Home.css";
 import SideBar from "../../components/SideBar/SideBar";
 import HeroSection from "../../components/HeroSection/HeroSection";
@@ -10,9 +10,13 @@ import HorizontalListRow from "../../components/HorizontalListRow/HorizontalList
 import NavBar from "../../components/NavBar/NavBar";
 import data from "../../db.json";
 import { TabContext } from "../../context/TabContext";
+import { logPageView } from "../../ga";
 
 const Home = () => {
   const { selectedTab } = useContext(TabContext);
+  useEffect(()=> {
+     logPageView();
+  }, [])
   return (
     <div className="home-container">
       <div className="nav-left">

@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 
 import { IoIosRepeat, IoIosShuffle } from "react-icons/io";
+import { logEvent } from "../../ga";
 
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -31,6 +32,7 @@ const AudioPlayer = () => {
   }, []);
 
   const togglePlayPause = () => {
+     logEvent("User", "Clicked Button", "Play-Pause");
     if (isPlaying) {
       audioRef.current.pause();
     } else {
