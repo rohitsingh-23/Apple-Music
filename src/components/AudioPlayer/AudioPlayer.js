@@ -32,16 +32,22 @@ const AudioPlayer = () => {
   }, []);
 
   const togglePlayPause = () => {
-     logEvent("User", "Clicked Button", "Play-Pause");
     if (isPlaying) {
+      logEvent("User", "Clicked Button", "Pause");
       audioRef.current.pause();
     } else {
+      logEvent("User", "Clicked Button", "Play");
       audioRef.current.play();
     }
     setIsPlaying(!isPlaying);
   };
 
   const toggleMute = () => {
+    if (isMuted) {
+      logEvent("User", "Clicked Button", "Un-Mute");
+    } else {
+      logEvent("User", "Clicked Button", "Mute");
+    }
     setIsMuted(!isMuted);
     audioRef.current.muted = !isMuted;
   };
