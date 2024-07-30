@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { logEvent } from "../ga";
 
 export const TabContext = createContext();
 
